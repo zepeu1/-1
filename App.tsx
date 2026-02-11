@@ -1,39 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { characters, timeline, missions } from './data';
 import { Character, FactionType, Mission } from './types';
 import { 
-  Skull, 
-  ShieldAlert, 
   Zap, 
   Users, 
-  Terminal, 
   ChevronRight, 
   Activity, 
-  Crosshair,
-  MapPin,
-  Clock,
-  AlertTriangle,
-  Radio,
-  FileWarning,
-  Wifi,
-  Lock,
-  Target
+  Crosshair, 
+  MapPin, 
+  Radio, 
+  Wifi, 
+  Target 
 } from 'lucide-react';
-
-const FactionBadge = ({ faction }: { faction: FactionType }) => {
-  const colors = {
-    'K.S.A': 'bg-blue-900/40 text-blue-300 border-blue-500/50',
-    'White Bone Cult': 'bg-slate-200/20 text-slate-200 border-white/50',
-    'Pollution': 'bg-red-900/40 text-red-400 border-red-500/50',
-    'C.R.A': 'bg-yellow-900/40 text-yellow-400 border-yellow-500/50'
-  };
-
-  return (
-    <span className={`px-2 py-0.5 text-xs font-mono border ${colors[faction]} rounded`}>
-      {faction}
-    </span>
-  );
-};
 
 const SystemTicker = () => (
   <div className="fixed top-0 left-0 right-0 z-[60] bg-neon-red/10 border-b border-neon-red/30 h-8 flex items-center overflow-hidden pointer-events-none">
